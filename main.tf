@@ -85,3 +85,15 @@ resource "aws_api_gateway_base_path_mapping" "this" {
 output "api_url" {
   value = "https://${var.api_gateway_domain_name}/${var.api_gateway_base_path}/${var.api_gateway_path_part}"
 }
+output "api_id" {
+  value = aws_api_gateway_rest_api.id
+}
+output "api_root_resource_id" {
+  value = aws_api_gateway_rest_api.resource_id
+}
+output "api_execution_arn" {
+  value = aws_api_gateway_rest_api.execution_arn
+}
+output "api_arn" {
+  value = aws_api_gateway_rest_api.arn
+}
