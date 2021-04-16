@@ -82,6 +82,9 @@ resource "aws_api_gateway_base_path_mapping" "this" {
   base_path   = var.api_gateway_base_path
 }
 
+output "api_gateway_name" {
+  value = var.api_gateway_name
+}
 output "api_url" {
   value = "https://${var.api_gateway_domain_name}/${var.api_gateway_base_path}/${var.api_gateway_path_part}"
 }
