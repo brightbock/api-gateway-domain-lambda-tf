@@ -9,6 +9,7 @@ resource "aws_api_gateway_rest_api" "this" {
   binary_media_types           = toset(["*/*"])
   minimum_compression_size     = 256
   disable_execute_api_endpoint = true
+  tags                         = var.api_tags
 }
 
 resource "aws_api_gateway_resource" "this" {

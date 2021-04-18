@@ -24,5 +24,7 @@ variable "api_gateway_base_path" {
   type = string
 }
 
+variable "api_tags" {
+}
 
 
